@@ -52,3 +52,9 @@ button.btn.btn-outline-success.my-2.my-sm-0{
 .nav-link{
   color: #fff;
 }
+.container{
+  margin-top: 50px;
+}
+.btn-primary{
+  background-color: red;
+}

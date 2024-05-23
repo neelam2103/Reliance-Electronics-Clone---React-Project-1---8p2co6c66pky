@@ -4,13 +4,13 @@ import axios from 'axios';
 function Navbar() {
    const [isOpen, setIsOpen] = useState(false);
 
- 
+
 
    const [getData, setData] = useState([]);
 
    useEffect(() => {
       relianceItem();
-   }, []);
+   }, [getData]);
 
    const relianceItem = async () => {
       try {
@@ -19,15 +19,16 @@ function Navbar() {
                projectID: '8p2co6c66pky'
             }
          });
-          console.log(response.data);
+         //  console.log(response.data);
          setData(response.data.data);
- 
+         // console.log(getData);
+
 
       } catch (err) {
          console.log(err);
       }
    }
-   const handlerClick=()=>{
+   const handlerClick = () => {
       setIsOpen(!isOpen);
       console.log(isOpen);
       console.log(getData);
@@ -44,16 +45,28 @@ function Navbar() {
             <ul className="navbar-nav">
                <li className="nav-item active">
                   <a className="nav-link left-nav" href="#" onClick={handlerClick}>Menu  <i className="fa-solid fa-list"></i><span className="sr-only">(current)</span>
-                 
-                  {getData.map((obj,index)=>{
-                  <ul key={index}>
-                 
-                     <li>
-                      {obj.getData}
-                     </li>
-                  </ul>
-               })}
-            
+                     <ul>
+                        {getData.map((obj, index) => {
+
+
+                           <li key={index}>
+                              {obj}
+                           </li>
+
+
+                        })}
+                        
+                        <div class="dropdown">
+                           <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                           </button>
+                           <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">{getData.obj}</a>
+                            
+                           </div>
+                        </div>
+                     </ul>
+
                   </a>
                </li>
                <nav className="navbar navbar-light bg-light  left-nav">
@@ -70,13 +83,14 @@ function Navbar() {
 
                </li>
                <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                     Login
+                  <a className="nav-a dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                     Profile
                   </a>
                   <div className="dropdown-menu">
                      <a className="dropdown-item" href="#">My Wishlist</a>
                      <a className="dropdown-item" href="#">My Order</a>
-                     <a className="dropdown-item" href="#">Logout</a>
+                     <a className="dropdown-item" href="/login">Login</a>
+                     <a className="dropdown-item" href="/register">Register</a>
                   </div>
                </li>
             </ul>
