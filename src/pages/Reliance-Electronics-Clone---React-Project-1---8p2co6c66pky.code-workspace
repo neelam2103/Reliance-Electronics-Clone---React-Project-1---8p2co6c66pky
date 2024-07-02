@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../music-app"
+		},
+		{
+			"path": "../../../newton_febB_2023"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "newton_febB_2023"
+	}
+}

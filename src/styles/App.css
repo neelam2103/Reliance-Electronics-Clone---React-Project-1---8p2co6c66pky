@@ -1,0 +1,60 @@
+.logo {
+  height: 10%;
+  width: 30%
+}
+
+/* .nav-link{
+   color: white;
+  } */
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
+.bg-dark {
+  background-color: red;
+}
+
+/* input.form-control {
+
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  width: 500px;
+  border-radius: 15px;
+  padding: 5px;
+  min-width: 190px;
+  border: none;
+
+} */
+nav.navbar.navbar-light.bg-light{
+  border: none;
+  border-radius: 15px;
+}
+input.form-control.mr-sm-2{
+  border: none;
+  width: 300px;
+}
+button.btn.btn-outline-success.my-2.my-sm-0{
+ border: none;
+ background-color: #fff;
+ color: #bbb;
+}
+
+.left-nav {
+  margin-right: 95px;
+}
+
+
+.dropdown-item {
+  background-color:#fff;
+  border-radius: 5px;
+}
+.nav-link{
+  color: #fff;
+}
+.container{
+  margin-top: 50px;
+}
+.btn-primary{
+  background-color: red;
+}
