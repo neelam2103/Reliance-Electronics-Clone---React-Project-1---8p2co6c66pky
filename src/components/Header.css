@@ -1,0 +1,62 @@
+/* .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: top 0.3s;
+  }
+  
+  .menu-open {
+    top: 0;
+  }
+  
+  .search-bar {
+    max-width: 320px;
+  }*/
+  
+  @media (max-width: 768px) {
+    .navbar{
+      height: auto;
+      padding-bottom: 10px;
+    }
+    .navbar2{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+    }
+    .hide{
+      display: none;
+    }
+    .menu{
+      padding-left: 10px;
+    } 
+     .lms{
+       display: flex;
+       justify-content: space-between;
+       
+       width: 65vw;
+     }
+     .llc{
+      gap: 0;
+     }
+     .cart{
+      position: absolute;
+      right: 15px;
+     }
+     .login{
+      position: absolute;
+      right: 50px;
+     }
+  }
+  @media (min-width: 768px) {
+    .mblsearch{
+      display: none;
+    }
+  }
